@@ -9,8 +9,8 @@ export default {
 </script>
 
 <template>
-    <li class="card cards text-white ">
-        <img :src="cards.card_images[0].image_url_small" :alt="cards.name" class="border rounded">
+    <li class="card cards text-white border-0 rounded">
+        <img :src="cards.card_images[0].image_url_small" :alt="cards.name" class=" rounded">
         <div class="title">{{ cards.name }}</div>
         <div>{{ cards.archetype }}</div>
     </li>

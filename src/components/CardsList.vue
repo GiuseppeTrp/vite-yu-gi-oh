@@ -26,7 +26,7 @@ export default {
     <div class="back-ground container-fluid p-5 border rounded d-flex flex-column justify-content center"> 
 
 
-        <ul class="container p-5  bg-white border rounded">
+        <ul class="container p-5  bg-white  rounded">
             <div class="count text-uppercase container-fluid bg-dark text-white p-2 text-center">Found {{ store.cards.length }} cards</div>
 
             
