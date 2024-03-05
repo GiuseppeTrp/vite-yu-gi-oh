@@ -1,5 +1,5 @@
 <script>
-import AppPagination from "./AppPagination.vue";
+
 import CardsItem from "./CardsItem.vue";
 
 import {store} from '../store.js';
@@ -8,7 +8,7 @@ export default {
     name: 'CardsList',
 
     components:  {
-        AppPagination,
+        
         CardsItem
     },
 
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-    <AppPagination></AppPagination>
+   
 
     <div class="back-ground container-fluid p-5 border rounded d-flex flex-column justify-content center"> 
 
