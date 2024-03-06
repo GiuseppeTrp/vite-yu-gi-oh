@@ -12,7 +12,7 @@ import AppPagination from "./components/AppPagination.vue";
 export default {
   data() {
     return {
-      cards: [],
+    
 
       // dichiariamo lo store, utilizzabile nel nostro componente
       store,
@@ -42,10 +42,11 @@ export default {
     searchCard() {
       console.log("search ");
 
-      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0&archetype=' + this.store.filterValue)
         .then(res => {
-          console.log(res.data)
-          this.store.archetypes = res.data;
+          console.log('Numero di carte', res.data.meta.total_rows)
+          this.store.cards = res.data.data;
+          
         });
     },
    
@@ -61,7 +62,7 @@ export default {
 
 <template>
     <AppPagination></AppPagination>
-    <FilterSearch></FilterSearch>
+    <FilterSearch @filter="searchCard"></FilterSearch>
     <CardsList> </CardsList>
 </template>
 
